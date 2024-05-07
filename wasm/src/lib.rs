@@ -20,7 +20,29 @@
 //!
 //! By preference, I want production logging to stay in NextJS only
 //! and propagate JsValues or JsErrors as needed
-
+//!
+//! # Examples
+//!
+//! ```js
+//! "use client"; // Prevents the useWasm is not a function error
+//! import { useWasm } from "@/modules/wasm";
+//!
+//! export default function Home() {
+//!   const { add, getPhantom, isLoading } = useWasm();
+//!   return (
+//!     <main className="text-green-500">
+//!       {isLoading ? (
+//!         <div>Loading...</div>
+//!       ) : (
+//!         <div>
+//!           <span>{`1 + 1 = ${add(1, 1)}`}</span>
+//!           <div>{String(getPhantom().solana?.isPhantom)}</div>
+//!         </div>
+//!       )}
+//!     </main>
+//!   );
+//! }
+//! ```
 use js_sys::Reflect;
 use wasm_bindgen::prelude::*;
 use web_sys::window;
@@ -39,10 +61,6 @@ use errors::WasmError;
 /// * `left` - The first number
 /// * `right` - The second number to add to `left`
 ///
-/// # Examples
-///
-/// ```js
-/// ```
 #[wasm_bindgen]
 pub fn wasm_add(left: usize, right: usize) -> usize {
     left + right
@@ -58,11 +76,6 @@ pub fn wasm_add(left: usize, right: usize) -> usize {
 // Typical error propagation can be done with the
 // `Result<JsValue, JsError>` return value.
 // You can create new JsErrors with `JsError::new()`
-//
-// # Examples
-//
-// ```js
-// ```
 #[wasm_bindgen]
 pub fn wasm_get_phantom() -> Result<JsValue, JsError> {
     /*

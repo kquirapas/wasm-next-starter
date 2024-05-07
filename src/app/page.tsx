@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Prevents the useWasm is not a function error
 import { useWasm } from "@/modules/wasm";
 
 export default function Home() {
