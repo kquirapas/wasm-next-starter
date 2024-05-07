@@ -6,6 +6,7 @@ export default function Home() {
 
   const checkPhantom = () => {
     if (isLoading) return;
+
     try {
       let phantom = getPhantom();
       let isPhantom = phantom.solana.isPhantom;

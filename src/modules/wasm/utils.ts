@@ -3,14 +3,14 @@
  * and prefix WASM-originating errors
  * with `ERR_WASM`
  */
-type AnyFunction = () => any; // new type for readability
+type AnyFunction = (...args: any[]) => any; // new type for readability
 
 export function tryCatchWasmWrapper(
   func: (...args: any[]) => any,
 ): AnyFunction {
-  return () => {
+  return (...args) => {
     try {
-      return func();
+      return func(...args);
     } catch (err) {
       console.error("ERR_WASM:", err);
     }
