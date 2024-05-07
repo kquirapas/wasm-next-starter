@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "wasm-pack build wasm --target web --out-dir ../src/modules/wasm/pkg --no-pack && next build",
     "start": "next start",
     "lint": "next lint",
-	"build-wasm": "wasm-pack build wasm --target web --out-dir ../src/modules/wasm/pkg"
+	"build-wasm": "wasm-pack build wasm --target web --out-dir ../src/modules/wasm/pkg --no-pack"
   },
   "dependencies": {
     "next": "14.2.3",

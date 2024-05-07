@@ -57,11 +57,6 @@ function takeObject(idx) {
 *
 * * `left` - The first number
 * * `right` - The second number to add to `left`
-*
-* # Examples
-*
-* ```js
-* ```
 * @param {number} left
 * @param {number} right
 * @returns {number}

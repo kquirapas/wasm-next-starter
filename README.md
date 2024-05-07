@@ -8,6 +8,14 @@ To stay updated and sharp with WASM as well as explore WASM-enabled optimization
 
 ## Setup
 
+### Prerequisite
+
+- Install `wasm-pack` ([Here](https://github.com/rustwasm/wasm-pack))
+
+### Steps
+
+1. Build `wasm` with 'yarn run build-wasm'
+
 ## Feedback
 
 Open an issue for suggestions
