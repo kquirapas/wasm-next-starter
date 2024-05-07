@@ -14,7 +14,7 @@ To stay updated and sharp with WASM as well as explore WASM-enabled optimization
 
 ### Steps
 
-1. Build `wasm` with 'yarn run build-wasm'
+1. Build `wasm` with `yarn run build-wasm`
 2. Remove `.gitignore` in `src/modules/pkg`
 3. Run dev `yarn run dev`
 
