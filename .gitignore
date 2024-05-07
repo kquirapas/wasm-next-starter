@@ -34,3 +34,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# rust
+/target
+*/**/target
+
+# custom
+.editorconfig
+.env
+*/**/.env
+.DS_Store
