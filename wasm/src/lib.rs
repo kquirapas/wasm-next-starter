@@ -66,16 +66,16 @@ pub fn wasm_add(left: usize, right: usize) -> usize {
     left + right
 }
 
-// WASM function to access DOM and injected DOM with
-// proper error handling
-//
-// Injected DOM is usually seen in Web3 development
-// (e.g. window.ethereum, window.phantom) and is injected
-// on load and not natively part of the DOM
-//
-// Typical error propagation can be done with the
-// `Result<JsValue, JsError>` return value.
-// You can create new JsErrors with `JsError::new()`
+/// WASM function to access DOM and injected DOM with
+/// proper error handling
+///
+/// Injected DOM is usually seen in Web3 development
+/// (e.g. window.ethereum, window.phantom) and is injected
+/// on load and not natively part of the DOM
+///
+/// Typical error propagation can be done with the
+/// `Result<JsValue, JsError>` return value.
+/// You can create new JsErrors with `JsError::new()`
 #[wasm_bindgen]
 pub fn wasm_get_phantom() -> Result<JsValue, JsError> {
     /*
