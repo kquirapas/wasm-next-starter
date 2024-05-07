@@ -3,7 +3,7 @@
  * and prefix WASM-originating errors
  * with `ERR_WASM`
  */
-type AnyFunction = (...args: any[]) => any; // new type for readability
+type AnyFunction = (...args: any[]) => any; // transient / ephemeral type for readability
 
 export function tryCatchWasmWrapper(
   func: (...args: any[]) => any,
