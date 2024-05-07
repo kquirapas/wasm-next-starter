@@ -16,6 +16,15 @@ To stay updated and sharp with WASM as well as explore WASM-enabled optimization
 
 1. Build `wasm` with 'yarn run build-wasm'
 
+```js
+  "scripts": {
+    // next build prepended with build-wasm command "build": "wasm-pack build wasm --target web --out-dir ../src/modules/wasm/pkg --no-pack && next build",
+    "build": "wasm-pack build wasm --target web --out-dir ../src/modules/wasm/pkg --no-pack && next build",
+    // build-wasm definition in package.json
+	"build-wasm": "wasm-pack build wasm --target web --out-dir ../src/modules/wasm/pkg --no-pack"
+  },
+```
+
 ## Feedback
 
 Open an issue for suggestions
