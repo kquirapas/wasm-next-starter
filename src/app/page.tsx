@@ -1,5 +1,4 @@
 "use client"; // Prevents the useWasm is not a function error
-import { useState } from "react";
 import { useWasm } from "@/modules/wasm";
 
 export default function Home() {
