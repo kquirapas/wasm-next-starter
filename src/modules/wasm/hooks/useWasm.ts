@@ -39,7 +39,9 @@ export default function useWasm() {
   useEffect(() => {
     (async () => {
       try {
-        // Load WASM
+        // Load WASM with `init()`
+        // See `Without a Bundler` guide in
+        // https://rustwasm.github.io/wasm-bindgen/examples/without-a-bundler.html
         await init();
         setAdapter({
           add: tryCatchWasmWrapper(wasm_add),
