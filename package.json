@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-	"build-wasm": "wasm-pack build wasm --target web --out-dir ../src/modules/wasm/pkg --no-pack"
+    "build-wasm": "wasm-pack build wasm --target web --out-dir ../src/modules/wasm/pkg --no-pack"
   },
   "dependencies": {
     "next": "14.2.3",
