@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import init, { wasm_add, wasm_get_phantom } from "../pkg";
+import init, { wasm_add, wasm_get_phantom } from "../pkg/wasm";
 
 // For type casting WASM functions
 export type Wasm = {
